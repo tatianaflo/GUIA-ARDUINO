@@ -1,0 +1,24 @@
+int ledpin=8;
+int blinkTimes;
+String msg1="por favor ingresa el numero de parpadeos:";
+int i;
+int dt =500;
+
+void setup() {
+ Serial.begin (9600);
+ pinMode(ledpin,OUTPUT);
+}
+
+void loop() {
+  Serial.println (msg1);
+  while (Serial.available()==0){
+    
+  }
+  blinkTimes=Serial.parseInt();
+  for(i=1;i<=blinkTimes;i++){
+    digitalWrite(ledpin,HIGH);
+    delay (dt);
+    digitalWrite(ledpin,LOW);
+    delay(dt);
+  }
+}
