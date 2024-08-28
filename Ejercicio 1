@@ -1,1 +1,21 @@
+String myName;
+String msg1= "Ingresa tu nombre";
+String msg2= ", hola:";
+String msg3= ". Bienvenido a el mejor curso de mecatronica";
 
+void setup(){
+  Serial.begin(9600);
+
+}
+
+void loop(){
+  Serial.println();
+  Serial.println(msg1);
+  while (Serial.available() ==0){
+    
+  }
+myName=Serial.readString();
+Serial.println(msg2);
+Serial.println (myName);
+Serial.println(msg3);
+}
