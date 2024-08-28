@@ -1,0 +1,18 @@
+int myNumber;
+String msg1= "por favor ingresa un numero:";
+String msg2 ="tu numero es";
+
+void setup() {
+ Serial.begin(9600);
+}
+
+void loop() {
+  Serial.print(msg1);
+  while (Serial.available() ==0){
+   
+  }
+myNumber = Serial.parseInt();
+Serial.println (msg2);
+Serial.println (myNumber);
+
+}
